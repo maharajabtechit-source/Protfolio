@@ -1,217 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maharaja S – Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Maharaja S | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
 
 <style>
-/* Body & Fonts */
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f2f2f2; /* Mild gray background */
-  margin: 0;
-  padding: 0;
-  color: #222;
-}
-
-/* Header */
-header {
-  text-align: center;
-  padding: 50px 20px 20px;
-}
-
-header h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  font-weight: 700;
-  margin: 0;
-  letter-spacing: 2px;
-}
-
-header p {
-  font-size: 16px;
-  opacity: 0.8;
-  margin-top: 10px;
-}
-
-/* Sections */
-.section {
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.section h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  font-weight: 600;
-  font-family: 'Playfair Display', serif;
-}
-
-/* Projects */
-#projects {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  padding: 20px;
-}
-
-.card {
-  background: #ffffff;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-button {
-  width: 100%;
-  padding: 8px;
-  background: #0288d1;
-  border: none;
-  border-radius: 6px;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 8px;
-}
-
-#loadBtn {
-  display: block;
-  margin: 10px auto 30px;
-  padding: 10px 22px;
-  background: #7e57c2;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-/* Skills */
-.skills span {
-  display: inline-block;
-  background: #fff;
-  padding: 8px 18px;
-  border-radius: 8px;
-  font-size: 14px;
-  margin: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.skills span:hover {
-  transform: scale(1.05);
-}
-
-/* Contact Section */
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 0 20px 30px;
-}
-
-.contact a {
-  width: 100%;
-  max-width: 320px;
-  display: block;
-  text-align: center;
-  background: #fff;
-  padding: 12px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 14px;
-  color: #222;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: 0.3s;
-}
-
-.contact a:hover {
-  transform: scale(1.05);
-  background: #e0e0e0;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 12px;
-  font-size: 13px;
-  opacity: 0.7;
-}
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: #ececec;
+        margin: 0;
+        padding: 0;
+        scroll-behavior: smooth;
+        color: #222;
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: white;
+        padding: 14px 0;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        z-index: 1000;
+        text-align: center;
+    }
+    nav a {
+        margin: 0 18px;
+        text-decoration: none;
+        font-weight: 500;
+        color: #222;
+        font-size: 15px;
+    }
+    header {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .bold-name {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 48px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+    .tagline {
+        font-size: 19px;
+        font-weight: 300;
+        color: #444;
+        margin-top: 6px;
+    }
+    section {
+        padding: 90px 20px;
+        text-align: center;
+    }
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 22px;
+        padding: 20px;
+        max-width: 1100px;
+        margin: auto;
+    }
+    .card {
+        background: white;
+        padding: 22px;
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+        transition: 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+    }
+    .btn {
+        padding: 11px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+        background: #cfcfcf;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 10px;
+    }
+    .contact-item {
+        width: 100%;
+        max-width: 380px;
+        background: white;
+        padding: 14px;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: 'Montserrat', sans-serif;
+    }
+    footer {
+        background: white;
+        padding: 22px;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 14px;
+        color: #555;
+    }
 </style>
 </head>
 <body>
 
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <header>
-  <h1>MAHARAJA S</h1>
-  <p>BTech IT Student | Cyber & Cloud Security Aspirant (2028)</p>
+    <div class="bold-name">MAHARAJA S</div>
+    <div class="tagline">BTech IT Student | Digital Creator</div>
 </header>
 
-<div class="section">
-  <h2>About Me</h2>
-  <p>I am a 2nd-year BTech IT student passionate about learning Cyber Security, Cloud Infrastructure, and IAM (Identity & Access Management) to build a strong career by 2028. I enjoy exploring systems, networking, Linux, and cloud fundamentals through practical learning projects.</p>
-</div>
+<section id="about">
+    <h2 style="font-family:Montserrat;font-size:32px;font-weight:800;">About Me</h2>
+    <p class="tagline">I'm a 2nd year BTech IT student passionate about Cyber Infrastructure, IAM, UI/UX concepts, and building digital solutions. Always learning, always improving.</p>
 
-<button id="loadBtn" onclick="loadProjects()">Load My Projects</button>
+    <!-- Add your image here later -->
+    <div style="margin-top:30px;">
+        <img src="YOUR_IMAGE_HERE.jpg" alt="Profile Preview" width="250px" style="border-radius:20px;opacity:0.7;">
+    </div>
+</section>
 
-<section id="projects"></section>
+<section id="projects">
+    <h2 style="font-family:Montserrat;font-size:34px;font-weight:800;">Projects Showcase</h2>
+    <div class="projects">
+        <div class="card">
+            <img src="PROJECT_IMAGE1.jpg" alt="Project 1" width="100%" style="border-radius:14px;opacity:0.6;">
+            <h3 style="font-family:Montserrat;font-weight:800;">Project 1</h3>
+            <p class="tagline">Description about your project goes here.</p>
+            <button class="btn">View Project</button>
+        </div>
+        <div class="card">
+            <img src="PROJECT_IMAGE2.jpg" alt="Project 2" width="100%" style="border-radius:14px;opacity:0.6;">
+            <h3 style="font-family:Montserrat;font-weight:800;">Project 2</h3>
+            <p class="tagline">Description about your project goes here.</p>
+            <button class="btn">View Project</button>
+        </div>
+    </div>
+</section>
 
-<div class="section">
-  <h2>Learning Focus</h2>
-  <div class="skills">
-    <span>Cloud Basics</span>
-    <span>IAM</span>
-    <span>Networking</span>
-    <span>Linux Basics</span>
-    <span>Security Fundamentals</span>
-  </div>
-</div>
+<section id="contact">
+    <h2 style="font-family:Montserrat;font-size:34px;font-weight:800;">Contact Me</h2>
 
-<div class="section contact">
-  <h2>Contact</h2>
-  <a href="https://www.linkedin.com/in/maharaja-s-0a65383a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn: Maharaja S</a>
-  <a href="#">GitHub: Uploading soon</a>
-  <a href="mailto:maharajabtechit@gmail.com">Email: maharajabtechit@gmail.com</a>
-  <a href="tel:+916383731146">Phone: +91 6383731146</a>
-</div>
+    <div class="contact-container">
+        <div class="contact-item">📧 maharajabtechit@gmail.com</div>
+        <div class="contact-item">📱 +91 6383731146</div>
+        <div class="contact-item">
+            <a href="https://www.linkedin.com/in/maharaja-s-0a65383a2" target="_blank" style="text-decoration:none;color:#0073e6;font-weight:700;">LinkedIn Profile</a>
+        </div>
+    </div>
+</section>
 
-<footer></footer>
-
-<script>
-const projectData = [
-  { title: "Portfolio Website v1", desc: "Dynamic JS loading project", link: "#" },
-  { title: "Login Form UI", desc: "Interactive mobile-friendly UI", link: "#" },
-  { title: "Cloud Learning Hub", desc: "Progress tracking", link: "#" },
-  { title: "Linux Reference Sheet", desc: "Command basics", link: "#" }
-];
-
-function loadProjects() {
-  const container = document.getElementById("projects");
-  container.innerHTML = "";
-
-  projectData.forEach((proj, i) => {
-    container.innerHTML += `
-      <div class="card">
-        <h3>${proj.title}</h3>
-        <p>${proj.desc}</p>
-        <button onclick="openProject(${i})">Open</button>
-      </div>
-    `;
-  });
-}
-
-function openProject(i) {
-  alert("Opening: " + projectData[i].title);
-  window.open(projectData[i].link, "_blank");
-}
-</script>
+<footer>
+    © 2026 Maharaja S | Hosted using GitHub Pages
+</footer>
 
 </body>
 </html>
